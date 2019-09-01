@@ -13,3 +13,8 @@ doc/api/
 #IDEA
 .idea
 *.iml
+
+#firebase
+.firebaserc
+firebase.json
+.firebase/
