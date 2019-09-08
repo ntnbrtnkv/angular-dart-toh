@@ -1,12 +1,14 @@
 import 'package:angular/angular.dart';
+import 'package:angular_router/angular_router.dart';
 
 import 'hero.dart';
 import 'hero_service.dart';
+import 'route_paths.dart';
 
 @Component(
   selector: 'my-dashboard',
   templateUrl: 'dashboard_component.html',
-  directives: [coreDirectives],
+  directives: [coreDirectives, routerDirectives],
 )
 class DashboardComponent implements OnInit {
   List<Hero> heroes;
@@ -14,6 +16,8 @@ class DashboardComponent implements OnInit {
   final HeroService _heroService;
 
   DashboardComponent(this._heroService);
+
+  String heroUrl(int id) => RoutePaths.hero.toUrl(parameters: {idParam: '$id'});
 
   @override
   void ngOnInit() async {
