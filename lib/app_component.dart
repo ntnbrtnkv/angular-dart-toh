@@ -9,6 +9,7 @@ import 'src/hero_service.dart';
   selector: 'my-app',
   templateUrl: 'app_component.html',
   directives: [routerDirectives],
+  styleUrls: ['app_component.css'],
   providers: [ClassProvider(HeroService)],
   exports: [RoutePaths, Routes],
 )
